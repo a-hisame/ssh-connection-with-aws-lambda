@@ -51,6 +51,7 @@ bash build.sh
   あるいは、NATインスタンスへのルーティングが必要 (デフォルトでインターネットに出ない)
 * ログの大きさにもよるが、十分小さければTimeoutは20秒ぐらいで十分
 * "Test" を実行して動作を確認
+* SSH接続に必要なSecurity Groupを用意して、Lambda Functionと接続対象にAttach
 
 ## 設定値
 
