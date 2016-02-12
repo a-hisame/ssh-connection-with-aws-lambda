@@ -1,0 +1,24 @@
+{
+	"Login": {
+		"Bucket": "your-sample-bucket",
+		"Key": "ssh-key/test",
+		"User": "ec2-user",
+		"Hostname": "192.168.1.10",
+		"Port": 22,
+		"KeyLocation": "/tmp/ssh"
+	},
+	"Collector": {
+		"CreateCommands": [
+			"sudo python -m zipfile -c /tmp/lambda-logs.zip /var/log/"
+		],
+		"TargetFiles": [
+			"/tmp/lambda-logs.zip"
+		],
+		"S3": {
+			"Bucket": "your-sample-bucket",
+			"Prefix": "lambda-collector",
+			"DatePrefix": true
+		}
+	}
+}
+
